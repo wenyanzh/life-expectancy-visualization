@@ -94,7 +94,7 @@ async function firstChart() {
 
     const myColor = d3.scaleOrdinal()
         .domain(getContinent())
-        .range(d3.schemeTableau10);
+        .range(d3.schemeCategory10);
 
     const tooltip = d3.select("#scene1_chart")
         .append("div")
@@ -291,7 +291,7 @@ async function secondChart() {
 
     const myColor = d3.scaleOrdinal()
         .domain(getContinent())
-        .range(d3.schemeTableau10);
+        .range(d3.schemeCategory10);
 
     const tooltip = d3.select("#scene2_chart")
         .append("div")
@@ -343,7 +343,7 @@ async function secondChart() {
         })
         .style("opacity", "0.85")
         .style("stroke-width", "1px");
-    setLegend(svg, getContinent(), width, myColor);
+    setLegend(svg, getContinent(), width-20, myColor);
     countryCodesAnnotations2().forEach(function (countryCode) {
         for (let i = 0; i < filteredData.length; i++) {
             if (filteredData[i].code === countryCode) {
@@ -418,7 +418,7 @@ function thirdChart() {
     let data = new Map()
     const colorScale = d3.scaleOrdinal()
         .domain(getContinent())
-        .range(d3.schemeTableau10);
+        .range(d3.schemeCategory10);
 
     Promise.all([
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
@@ -489,7 +489,7 @@ function setLegend(svg, continentKeys, width, myColor) {
         .append("text")
         .attr("x", width-85)
         .attr("y", function (d, i) {
-            return i * 25
+            return i * 25+5
         }) 
         .style("fill", function (d) {
             return myColor(d)
