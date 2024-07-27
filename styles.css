@@ -21,6 +21,8 @@ index {
 
 .container {
     background-color: #dcdcc6;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 div.tooltip {
@@ -53,8 +55,3 @@ a.button1 {
     background-color: goldenrod;
     text-decoration: none;
 }
-
-div {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
