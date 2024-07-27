@@ -114,22 +114,14 @@ async function firstChart() {
         .enter()
         .append("circle")
         .attr("class", "bubbles")
-        .attr("cx", function (d) {
-            return x(Number(d.gdp_per_capita));
-        })
-        .attr("cy", function (d) {
-            return y(Number(d.period_life_expectancy));
-        })
-        .attr("id", function (d) {
-            return "bubble-" + d.code;
-        })
-        .attr("r", function (d) {
-            return z(Number(d.population));
-        })
+        .attr("cx", function (d) {return x(Number(d.gdp_per_capita));})
+        .attr("cy", function (d) {return y(Number(d.period_life_expectancy));})
+        .attr("id", function (d) {return "bubble-" + d.code;})
+        .attr("r", function (d) { return z(Number(d.population));})
         .on("mouseover", function (event, d) {
             tooltip.transition()
                 .duration(200)
-                .style("opacity", .9);
+                .style("opacity", .8);
             tooltip.html(firstTooltip(d));
             tooltip.style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px")
@@ -141,7 +133,9 @@ async function firstChart() {
         })
         .style("fill", function (d) {
             return myColor(d.continent);
-        });
+        })
+        .style("opacity", "0.85")
+        .style("stroke-width", "1px");
     setLegend(svg, getContinent(), width, myColor);
     countryCodesAnnotations1().forEach(function (countryCode) {
         for (let i = 0; i < filteredData.length; i++) {
@@ -334,7 +328,7 @@ async function secondChart() {
         .on("mouseover", function (event, d) {
             tooltip.transition()
                 .duration(200)
-                .style("opacity", .9);
+                .style("opacity", .8);
             tooltip.html(secondTooltip(d));
             tooltip.style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px")
@@ -346,7 +340,9 @@ async function secondChart() {
         })
         .style("fill", function (d) {
             return myColor(d.continent);
-        });
+        })
+        .style("opacity", "0.85")
+        .style("stroke-width", "1px");
     setLegend(svg, getContinent(), width, myColor);
     countryCodesAnnotations2().forEach(function (countryCode) {
         for (let i = 0; i < filteredData.length; i++) {
