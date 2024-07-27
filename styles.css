@@ -10,11 +10,17 @@
 .body {
     font-size: 1.9em;
     font-family: "Optima", sans-serif;
+    background-color: #dcdcc6;
 }
 
 index {
     font-size: 1.6em;
     font-family: "Optima", sans-serif;
+    background-color: #dcdcc6;
+}
+
+.container {
+    background-color: #dcdcc6;
 }
 
 div.tooltip {
