@@ -35,3 +35,12 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
+
+a.button {
+    padding: 5px 15px;
+    border: 1px outset buttonborder;
+    border-radius: 10px;
+    color: black;
+    background-color: lightseagreen;
+    text-decoration: none;
+}
