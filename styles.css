@@ -1,0 +1,31 @@
+.bubbles {
+    stroke-width: 2px;
+    stroke: white;
+}
+
+.bubbles:hover {
+    stroke: black;
+}
+
+.body {
+    font-size: 1.6em;
+    font-family: "Optima", sans-serif;
+}
+
+index {
+    font-size: 1.6em;
+    font-family: "Optima", sans-serif;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 80px;
+    padding: 2px;
+    font: 12px "Optima", sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}

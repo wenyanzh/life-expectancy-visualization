@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Life Expectancy Exploration</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js" 
+                integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg==" 
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" 
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+
+    <body onload='thirdChart()'>
+    <div class="container">
+        <div id="scene3_chart">
+            <h2 align="center">Worldwide Life Expectancy Summary</h2>
+            <p align="center">
+                <a class="btn btn-primary" href="scene1.html" role="button">Back to First Slide</a>
+            </p>
+            <div>
+                <body class="body">
+                To summarize, from the charts, we can see that there is a positive relationship between life expectancy and GDP per capita.
+                This is reasonable since GDP per capita increases the life expectancy through increasing economic growth and development in a 
+                country and thus leads to the prolongation of longevity. There is also a positive relationship between life expectancy and health expenditure per capita.
+                This is reasonable as An increase in total health expenditure has a significant positive impact on health outcomes, which leads to a positive relationship 
+                between healthcare expenditures and life expectancy. <br>
+                <p><em>Note: countries in black below are missing life expectancy data.</em></p>
+                <p><b>You can explore life expectancy and population of each country by hovering over the country!</b><br>
+            </div>
+            <svg id="scene3_chart" width="1200" height="640">
+            </svg>
+        </div>
+    </div>
+    </body>
+</html>
