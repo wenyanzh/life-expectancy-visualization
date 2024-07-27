@@ -153,14 +153,14 @@ function firstChartAnnotations(d, x, y, margin) {
     const annotations = [
         {
             note: {
-                label: "$" + Math.round(d.gdp_per_capita) + " per capita, " + Math.round(d.period_life_expectancy) + " years",
+                label: Math.round(d.period_life_expectancy) + " years",
                 lineType: "none",
                 title: d.entity,
                 orientation: "leftRight",
                 "align": "middle"
             },
-            type: d3.annotationCallout,
-            subject: {radius: 30},
+            type: d3.annotationCalloutElbow,
+            connector: { end: "arrow" },
             x: x,
             y: y,
             dx: computedDX,
@@ -361,20 +361,19 @@ function secondTooltip(object) {
 }
 
 function secondChartAnnotations(d, x, y, margin) {
-    const computedDX = d.entity == "Japan" ? -110 : -20;
-    const computedDY = d.entity == "Japan" ? -10 : 50;
+    const computedDX = d.entity == "Japan" ? -50 : 20;
+    const computedDY = d.entity == "Japan" ? -30 : 50;
     const annotations = [
         {
             note: {
-                label: "$" + Math.round(d.health_expenditure_per_capita) + " per capita, " + Math.round(d.period_life_expectancy) + " years",
+                label: Math.round(d.period_life_expectancy) + " years",
                 lineType: "none",
-                bgPadding: {"top": 15, "left": 10, "right": 10, "bottom": 10},
                 title: d.entity,
                 orientation: "leftRight",
                 "align": "middle"
             },
-            type: d3.annotationCallout,
-            subject: {radius: 30},
+            type: d3.annotationCalloutElbow,           
+            connector: { end: "arrow" },
             x: x,
             y: y,
             dx: computedDX,
