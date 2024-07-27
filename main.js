@@ -343,7 +343,7 @@ async function secondChart() {
         })
         .style("opacity", "0.85")
         .style("stroke-width", "1px");
-    setLegend(svg, getContinent(), width-20, myColor);
+    setLegend(svg, getContinent(), width-26, myColor);
     countryCodesAnnotations2().forEach(function (countryCode) {
         for (let i = 0; i < filteredData.length; i++) {
             if (filteredData[i].code === countryCode) {
